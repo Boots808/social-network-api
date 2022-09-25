@@ -1,13 +1,8 @@
-//api routes
-
 const router = require("express").Router();
 const apiRoutes = require("./api");
 
-router.use("/api", apiRoutes);
+router.use("./api", apiRoutes);
 
-//route error
-router.use((req, res) => {
-  res.status(404).send("<h2>404 Error!</h2>");
-});
+router.use((req, res) => res.send("Incorrect Route!"));
 
 module.exports = router;

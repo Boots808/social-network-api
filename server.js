@@ -1,4 +1,3 @@
-//connections
 const mongoose = require("mongoose");
 const express = require("express");
 
@@ -11,17 +10,14 @@ app.use(express.static("public"));
 
 app.use(require("./routes"));
 
-//mongoose connection
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/social-network-api",
+  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/social-network",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }
 );
 
-// Log Mongo Queries
 mongoose.set("debug", true);
 
-//port
-app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Connected on localhost:${PORT}`));

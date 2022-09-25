@@ -3,7 +3,7 @@ const router = require("express").Router();
 const {
   getAllThoughts,
   getThoughtById,
-  createThought,
+  // createThought,
   updateThought,
   inputReaction,
 } = require("../../controllers/thought-controller");

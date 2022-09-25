@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 const {
-  getAllUser,
+  getAllUsers,
   getUserById,
   inputUser,
   updateUser,
@@ -9,7 +9,7 @@ const {
 } = require("../../controllers/user-controller");
 
 //users
-router.route("/").get(getAllUser).post(inputUser);
+router.route("/").get(getAllUsers).post(inputUser);
 
 //users :id
 router.route("/:id").get(getUserById).put(updateUser);

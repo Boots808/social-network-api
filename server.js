@@ -13,7 +13,7 @@ app.use(require("./routes"));
 
 //mongoose connection
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/social-network",
+  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/social-network-api",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
